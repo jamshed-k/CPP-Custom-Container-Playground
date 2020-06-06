@@ -34,3 +34,6 @@
 # Build and binary files
 *build/
 *bin/
+
+# Miscellaneous
+*.vscode/
