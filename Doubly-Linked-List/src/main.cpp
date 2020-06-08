@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+#include <algorithm>
 
 
 int main()
@@ -89,6 +90,16 @@ int main()
 
     r = r - 4;
     std::cout << "Current val: " << *r << "\n";
+
+
+
+    // Test the custom iterators with C++11 `for_each`.
+    std::cout << "\n List: ";
+    std::for_each(lst.begin(), lst.end(), [](int x)
+    {
+        std::cout << x << " ";
+    });
+    std::cout << "\n";
 
 
     return 0;
