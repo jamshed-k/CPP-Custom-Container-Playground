@@ -15,13 +15,7 @@ class Ring_Queue
 {
     friend class RQ_Iterator<T, N>;
 
-    // typedef T* iterator;
     typedef RQ_Iterator<T, N> iterator;
-    typedef ptrdiff_t difference_type;
-    typedef size_t size_type;
-    typedef T value_type;
-    typedef T* pointer;
-    typedef T& reference;
 
 
 private:

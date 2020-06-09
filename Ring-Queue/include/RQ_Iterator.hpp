@@ -10,9 +10,18 @@
 
 
 template <typename T, size_t N>
-class RQ_Iterator: public std::iterator<std::forward_iterator_tag, T>
+class RQ_Iterator
 {
+public:
+
     typedef RQ_Iterator<T, N> iterator;
+    
+    typedef std::forward_iterator_tag iterator_category;
+    typedef T value_type;
+    typedef int difference_type;
+    typedef T* pointer;
+    typedef T& reference;
+    
 
 private:
 
