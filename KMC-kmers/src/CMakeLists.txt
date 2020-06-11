@@ -14,6 +14,8 @@ set(PROJECT_SRC
         kmc_api/kmc_file.cpp
         kmc_api/kmer_api.cpp
         kmc_api/mmer.cpp
+        Kmer_Container.cpp
+        Kmer_Iterator.cpp
 )
 
 
