@@ -19,13 +19,18 @@ int main(int argc, char **argv)
         std::exit(EXIT_FAILURE);
     }
 
-
     const std::string kmc_file(argv[1]);
+
+    // Open the k-mers container.
     Kmer_Container kmers(kmc_file);
 
+
+    // Get some information about the underlying KMC database.
     CKMCFileInfo info = kmers.info();
-    print_database_info(info);
-    
+    print_database_info(info);    
+
+
+    // Iterating over the k-mers on the database from disk.
 
     std::cout << "\nSet of unique k-mers:\n";
     auto it_beg = kmers.begin();
@@ -35,6 +40,7 @@ int main(int argc, char **argv)
         std::cout << it->to_string() << "\n"; // [Or,] std::cout << (*it).to_string() << "\n";
 
 
+    // Close the container.
     kmers.close();
 
 
