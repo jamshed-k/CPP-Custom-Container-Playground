@@ -98,7 +98,7 @@ protected:
 
 	// ----------------------------------------------------------------------------------
 	template<typename RandomAccessIterator>
-	inline void to_string_impl(RandomAccessIterator iter)
+	inline void to_string_impl(RandomAccessIterator iter) const
 	{
 		uchar *byte_ptr;
 		uchar c;
@@ -430,7 +430,7 @@ public:
 	// Convert kmer into string (an alphabet ACGT)
 	// RET	: string kmer
 	//-----------------------------------------------------------------------
-	inline std::string to_string()
+	inline std::string to_string() const
 	{
 		std::string string_kmer;		
 		string_kmer.resize(kmer_length);
